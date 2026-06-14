@@ -1,32 +1,43 @@
 # Logic Encoder Login System
 
-Site-wide **identity, email, and content gating** for logicencoder.com — branded transactional mail, SMTP fixes, login protection, per-post access rules, and protected uploads.
+Site-wide **identity, email, and content gating** for logicencoder.com — branded transactional mail, SMTP deliverability fixes, login protection, per-post access rules, and protected file downloads.
 
-Private plugin: [logicencoder/logicencoder-login-system-plugin](https://github.com/logicencoder/logicencoder-login-system-plugin). Page shells: [logic-encoder-theme](https://github.com/logicencoder/logic-encoder-theme) — [theme overview](https://github.com/logicencoder/logic-encoder-theme-overview).
-
-## The problem it solves
-
-Default WordPress login and `wp_mail` deliverability are not enough for a branded membership site. Operators need restricted posts, skinned auth flows, email templates, and attachment protection without bolting on a separate SaaS auth product.
+Private plugin: [logicencoder/logicencoder-login-system-plugin](https://github.com/logicencoder/logicencoder-login-system-plugin). Page templates: [logic-encoder-theme](https://github.com/logicencoder/logic-encoder-theme) — [theme overview](https://github.com/logicencoder/logic-encoder-theme-overview).
 
 ## Visitor flows
 
-- Branded login overlay on restricted posts; forced login for protected attachments
-- Registration, verification, password reset, newsletter unsubscribe URLs
+- Branded login overlay when viewing restricted posts
+- Registration, email verification, password reset, newsletter unsubscribe URLs
+- Forced login before downloading protected attachments
+- Default redirect after login: **`/dashboard/`** (configurable)
 - Search engines may still index unrestricted content when restriction meta allows SEO visibility
-
-Default post-login redirect: **`/dashboard/`** (configurable).
 
 ## Content restriction
 
-Per-post meta marks content as members-only. `the_content` and upload guards enforce access. Admin stats show restriction usage across the site.
+Per-post meta marks members-only content. `the_content` filter and upload guards enforce access at read time. Admin dashboard shows restriction statistics across the site.
 
 ## Email system
 
-Skinned HTML templates for transactional mail, PHPMailer tuning, send logging, debug table viewer, orphaned-email cleanup. Admin AJAX refresh for email logs.
+Skinned HTML templates for transactional mail. PHPMailer tuning (`phpmailer_init`, `wp_mail_*` filters). Send logging with admin AJAX refresh. Debug table viewer and orphaned-email cleanup tools for support incidents.
 
-## Admin
+## Security hooks
 
-**Logic Encoder** menu: Main settings, Users, Email templates, Email logs, Content restriction stats, Debug tools. Dashboard widget for quick status.
+Failed login tracking, authenticate filter, profile field extensions, attachment link protection on `template_redirect`. Works with [le-settings-plugin](https://github.com/logicencoder/le-settings-plugin-overview) Telegram alerts for complementary site-level lockout.
+
+## Admin menu
+
+**Logic Encoder** submenu pages:
+
+| Page | Purpose |
+|------|---------|
+| Main settings | SMTP, branding, redirect defaults |
+| Users | Quick user management links |
+| Email templates | HTML skins per mail type |
+| Email logs | Delivery history with AJAX refresh |
+| Content restriction | Usage stats |
+| Debug | Table viewer, diagnostics |
+
+Dashboard widget for at-a-glance mail queue health.
 
 See [REPOS.md](REPOS.md).
 
