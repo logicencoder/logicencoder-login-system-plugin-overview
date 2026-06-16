@@ -37,7 +37,7 @@ Top-level wp-admin menu **Logic Encoder** (lock icon). The default **Main settin
 
 Quick links at the foot of the screen jump to login URL, dashboard URL, and other Logic Encoder submenus.
 
-**Example — branded verification mail:** set **From name** and **From email** to your domain, enable **SMTP**, open **Email Templates** → **Email Verification**, edit the copy, send **Quick Test**, confirm delivery in **Email Logs**.
+To send branded verification mail, set **From name** and **From email** to your domain, enable **SMTP**, open **Email Templates** → **Email Verification**, edit the copy, send **Quick Test**, and confirm delivery in **Email Logs**.
 
 ## Users
 
@@ -51,7 +51,7 @@ The **Users** screen lists every WordPress account with Logic Encoder fields: re
 | **Activate** | Marks account verified without waiting for the link click |
 | **Delete** | Removes non-admin users |
 
-**Example — stuck registration:** find the row → **Resend Email**; if the address is orphaned, use **Database Cleanup** first, then ask the member to register again.
+For a stuck registration, find the row → **Resend Email**; if the address is orphaned, use **Database Cleanup** first, then ask the member to register again.
 
 ## Email templates
 
@@ -69,7 +69,7 @@ The **Users** screen lists every WordPress account with Logic Encoder fields: re
 
 Each tab exposes merge chips such as `{name}`, `{email}`, `{verification_url}`, `{reset_url}`, `{dashboard_url}`, `{unsubscribe_url}`, `{site_name}`, `{date}` — click to insert into subject or body. **Save Template** per type; **Send Test Email** at the bottom fires a live message to any inbox you type.
 
-**Example — post-reset copy:** edit **Password Reset** subject and body → **Save Template** → **Quick Test** to your Gmail → check **Email Logs** for success.
+To refresh post-reset copy, edit **Password Reset** subject and body → **Save Template** → **Quick Test** to your Gmail → check **Email Logs** for success.
 
 ## Email logs
 
@@ -77,7 +77,7 @@ Each tab exposes merge chips such as `{name}`, `{email}`, `{verification_url}`, 
 
 Filter cards by **type** (test, registration, verification, reset, welcome, newsletter, …), **status** (success/failed), **email address**, and **limit** (50–500). Each card expands to server response detail. **Clear All Logs** wipes history.
 
-**Example — mail stopped arriving:** filter **Failed** → read the expanded error → fix SMTP or DNS → send **Test Email** again.
+When mail stops arriving, filter **Failed** → read the expanded error → fix SMTP or DNS → send **Test Email** again.
 
 ## Content restriction
 
@@ -96,7 +96,7 @@ In the **page/post editor**, the **Content Restriction** sidebar meta box sets *
 
 Logged-out visitors see a partial article, fade, and an inline **Restricted Content** card with email, password, **Sign In**, and **Register here** (return URL preserved). Search crawlers on the built-in bot list still receive full HTML for indexing.
 
-**Example — members-only tool page:** edit the MEXC dashboard page → check **Restrict to registered users only** → set preview height → publish. Anonymous readers see the teaser and login card; members see the full page after signing in at `/login/`.
+For a members-only tool page, edit the MEXC dashboard page → check **Restrict to registered users only** → set preview height → publish. Anonymous readers see the teaser and login card; members see the full page after signing in at `/login/`.
 
 ## Debug logs and database cleanup
 
@@ -133,7 +133,7 @@ Visitor clicks the link from mail → account marked verified → **welcome emai
 
 Logged-out visitors hitting attachment pages, `?download=` links, or direct URLs to PDF/ZIP/DOC/XLS/CSV under uploads are sent to **`/login/?redirect_to=…`** and return to the file after sign-in.
 
-**Example — lock a PDF:** upload to Media Library, share the file URL — guests are prompted to log in before the download starts.
+To lock a PDF behind login, upload to Media Library and share the file URL — guests are prompted to sign in before the download starts.
 
 ### Unsubscribe
 
