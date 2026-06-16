@@ -157,4 +157,49 @@ See [REPOS.md](REPOS.md).
 
 ---
 
+## Feature examples (two per capability)
+
+#### Branded login and registration
+1. You sign in with email and password on **Sign in** and choose **Keep me signed in** when you trust the device.
+2. You switch to **Create account**, meet the live password checklist, and submit; verification mail arrives before you can log in.
+
+#### Email verification
+1. You click the link in your inbox and the site marks your account verified, sends welcome mail, and redirects toward login.
+2. You try to log in before verifying and the form blocks you until you complete the link step.
+
+#### Forgot and reset password
+1. You open **Forgot password?**, enter your email, and receive a branded reset message with a link to **reset-password**.
+2. You set a new password that satisfies site rules and land back on login with an automatic redirect.
+
+#### Member dashboard and account
+1. You sign in and reach **dashboard** to access member-only site areas configured in plugin settings.
+2. You open **account** to change your password under the same strength rules as registration.
+
+#### Per-page content gating
+1. You hit a members-only page while logged out and see a teaser, fade overlay, and inline **Sign In** card with return URL preserved.
+2. You sign in from that card and return to the full article without losing your place.
+
+#### Protected downloads
+1. You follow a PDF link while logged out and the site sends you to login with `redirect_to` before the download starts.
+2. You sign in and land back on the file URL so the download proceeds immediately.
+
+#### Users roster (operator)
+1. You open **Users**, sort by verification or consent, and **Resend Email** when a member did not receive activation.
+2. You click **Activate** to mark an account verified manually after support confirms identity out of band.
+
+#### Email templates and logs (operator)
+1. You edit **Password Reset** or **Welcome Email** copy, insert merge chips like `{verification_url}`, and **Save Template**.
+2. You filter **Email Logs** by failed sends, expand server responses, and fix SMTP or DNS issues.
+
+#### Content restriction settings (operator)
+1. You enable **Content Restriction**, set preview length and fade delay, and tick restrict on selected pages in the editor meta box.
+2. You list every restricted post in **Content Restriction** and open **Edit** or **View** to audit members-only coverage.
+
+#### Database cleanup and dashboard widget (operator)
+1. You use **Email Existence Checker** when registration fails for an address tied to orphaned data.
+2. You read **Logic Encoder User Stats** on the WordPress home dashboard for total users and marketing-consent count at a glance.
+
+
+---
+
 **Made by [Logic Encoder](https://logicencoder.com)** · [GitHub](https://github.com/logicencoder) · [Contact](https://logicencoder.com/contact/)
