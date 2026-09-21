@@ -157,7 +157,7 @@ See [REPOS.md](REPOS.md).
 
 ---
 
-## Feature examples (two per capability)
+## Operator workflows
 
 #### Branded login and registration
 1. You sign in with email and password on **Sign in** and choose **Keep me signed in** when you trust the device.
