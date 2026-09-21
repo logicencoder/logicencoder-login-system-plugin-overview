@@ -1,5 +1,7 @@
 # Logic Encoder Login System — WordPress plugin
 
+![Login page on logicencoder.com — sign-in and create-account card rendered by the plugin](login.png)
+
 **Logic Encoder Login System** is the member identity layer for [logicencoder.com](https://logicencoder.com): branded login and registration, email verification, password reset, HTML transactional mail, per-page content gating, and protected downloads — configured in wp-admin and rendered through the [Logic Encoder theme](https://github.com/logicencoder/logic-encoder-theme-overview) page templates.
 
 Members sign in at **`/login/`**, land on **`/dashboard/`** after activation (path is configurable), and manage passwords on **`/account/`**. Operators control SMTP sender identity, email skins, password rules, lockouts, and which pages require a logged-in reader.
