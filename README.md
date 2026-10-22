@@ -29,7 +29,7 @@ User administration and settings give the operator a place to maintain access. E
 
 ## Support and maintenance
 
-Dashboard information, debug logs and cleanup controls assist when a member reports a problem. The public login screenshot shows the entry experience; registration, recovery, account and administrator views would make the full journey easier to understand.
+Dashboard information, debug logs and cleanup controls assist when a member reports a problem.
 
 ---
 
