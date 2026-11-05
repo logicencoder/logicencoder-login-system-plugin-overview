@@ -13,31 +13,31 @@ Member access involves more than a login form: people need to register, verify t
 
 ## A coherent member journey
 
-Login and registration pages provide the starting point for new and returning members. Email verification gives the user a clear next step after registration, while account and contact surfaces support ongoing use. The aim is a connected journey rather than unrelated forms.
+The **Login & Access** settings decide where members land after signing in and whether marketing consent is required at registration, and set the password rules (minimum length and minimum numbers of letters, digits and special characters). Registration sends a verification email, a user can reach the account and contact pages afterwards, and the member list shows each account's role, registration date, country, verification state and consent.
 
 New members need to know what happens after submitting a form. A connected registration and verification journey gives them that next step while returning members retain a familiar sign-in route.
 
 ## Recover access without a manual exchange
 
-Forgot-password and reset flows let members resolve common access problems themselves. Clear email communication supports those steps. Administrators can maintain the templates so the messages fit the site's presentation and instructions.
+Forgot-password and reset flows let members recover access themselves. The emails come from a configurable sender (name, address and logo, with optional SMTP delivery) and the administrator edits six templates: welcome, password reset, email change notification, email verification, newsletter subscription and a test message, with a reference list of template variables.
 
 Self-service recovery is useful when a member cannot complete an ordinary login. The site owner can keep the related messages and templates aligned with the experience being offered.
 
 ## Control access to content
 
-Restriction controls let the owner decide which content and downloads are available to members. The visitor sees the appropriate access path, while the operator maintains those choices in administration. This connects the public site with its membership model.
+Each post or page can be set to block non-members completely or to show a preview: a real, server-side-truncated share of the content (between 5 and 90 percent, 30 by default) followed by a login prompt, like a newspaper paywall. A preview button shows the result before publishing. Downloads are managed as gated files that check access before they are served, and the `[member_downloads]` shortcode lists the downloads the current visitor may see.
 
 Access choices connect the membership model with actual pages and downloads. The administrator can maintain those choices while the member sees the appropriate route to the content.
 
 ## Manage users and communication
 
-User administration and settings give the operator a place to maintain access. Email logs help investigate whether a relevant message was sent, while template controls support consistent communication. Unsubscribe handling covers the corresponding communication preference.
+User administration lists members with ID, name, email, role, registration date, IP address, country, verified and consent columns. The security settings limit login attempts with a lockout duration, block disposable email addresses plus a custom domain list and can log logins. **Email logs** can be filtered by type, status and address, an email existence checker and an email cleanup tool help with problem accounts, and a deliverability panel shows the SPF, DKIM and DMARC records of the sending domain.
 
 User records and communication history help support a specific account question. They let the operator review the relevant context rather than treating each message or form as an isolated event.
 
 ## Support and maintenance
 
-Dashboard information, debug logs and cleanup controls assist when a member reports a problem.
+The dashboard summarises the member base, quick actions run common maintenance, recent debug logs show what the plugin did, and a test-email tool confirms that messages leave the site.
 
 Maintenance tools support the longer-running member service around the forms. Use the dashboard and logs when a reported issue needs more context than the sign-in page can provide.
 
