@@ -1,6 +1,6 @@
 # Logic Encoder Login System
 
-![Logic Encoder Login System workspace](login.png)
+![Logic Encoder Login System workspace](logicencoder-login-system-member-login-form.png)
 
 Member access involves more than a login form: people need to register, verify their address, recover access and reach the content meant for them. Logic Encoder Login System brings these journeys and their administration together in WordPress.
 
